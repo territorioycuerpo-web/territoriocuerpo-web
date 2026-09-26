@@ -609,6 +609,38 @@
   }
   pintarCupo(info);
   if (!enAppsScript) pedirCupo();
+
+  /* Contador de visitas: una por sesión, sin datos personales.
+     Abriendo la página con ?yo=1 una vez, ese dispositivo deja de contarse. */
+  (function contarVisita() {
+    var guardar = function (tipo, clave, valor) { try { window[tipo].setItem(clave, valor); } catch (e) {} };
+    var leer = function (tipo, clave) { try { return window[tipo].getItem(clave); } catch (e) { return null; } };
+    if (/[?&]yo=1\b/.test(location.search)) {
+      guardar('localStorage', 'tc-yo', '1');
+      var aviso = document.createElement('p');
+      aviso.textContent = 'Listo: tus visitas desde este dispositivo ya no se cuentan.';
+      aviso.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;margin:0;padding:12px 16px;border-radius:12px;background:#2A1520;color:#FBF5F2;font-weight:600;z-index:9;text-align:center';
+      document.body.appendChild(aviso);
+      setTimeout(function () { aviso.remove(); }, 5000);
+      return;
+    }
+    if (leer('localStorage', 'tc-yo') || leer('sessionStorage', 'tc-visto')) return;
+    guardar('sessionStorage', 'tc-visto', '1');
+    var ua = navigator.userAgent || '';
+    var ref = (document.referrer || '').toLowerCase();
+    var q = location.search.toLowerCase();
+    var origen = /instagram/i.test(ua) || /instagram/.test(ref) || /[?&]o=ig\b/.test(q) ? 'Instagram'
+      : /whatsapp/.test(ref) || /[?&]o=wa\b/.test(q) ? 'WhatsApp'
+      : /FBAN|FBAV/.test(ua) || /facebook/.test(ref) ? 'Facebook'
+      : /google\./.test(ref) ? 'Google' : 'Directo u otro';
+    var v = {
+      tipo: 'visita', origen: origen,
+      dispositivo: /Mobi|Android|iPhone|iPad/i.test(ua) ? 'Celular' : 'Computadora',
+      pagina: enAppsScript ? 'Link de Google' : 'territoriocuerpo.casa'
+    };
+    if (enAppsScript) google.script.run.contarVisita(v);
+    else if (API) fetch(API, { method: 'POST', body: JSON.stringify(v), keepalive: true }).catch(function () {});
+  })();
   setInterval(pedirCupo, 60000);
 
   /* Cuenta regresiva */
