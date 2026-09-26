@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Territorio Cuerpo · Encuentro de movimiento para mujeres</title>
 <meta name="description" content="90 minutos para dejar de exigirle al cuerpo que llegue, y empezar a preguntarle cómo está. Domingo 11 de octubre, 14:00 hs, Boedo, CABA.">
 <meta name="theme-color" content="#7A2440">
-<meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbw4ARMmET-by_grZ_4J1Y6Okl9PgRVeJPC-JkEld0VrvlOMHISw7OKvd40R8GblXYv1/exec">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://territoriocuerpo.casa/">
 <meta property="og:title" content="Territorio Cuerpo · Encuentro de movimiento para mujeres">
@@ -14,8 +13,727 @@
 <meta property="og:image" content="https://territoriocuerpo.casa/flor.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23E2A43C'/%3E%3Cstop offset='1' stop-color='%23C8566A'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M32 4c15 0 28 10 28 27S47 60 31 60 4 49 4 32 17 4 32 4z'/%3E%3C/svg%3E">
-<style>html,body{margin:0;background:#F2E8E4;font-family:system-ui,sans-serif;color:#2A1520}p{padding:40px 20px;text-align:center}a{color:#7A2440}</style>
-<script>location.replace("https://script.google.com/macros/s/AKfycbw4ARMmET-by_grZ_4J1Y6Okl9PgRVeJPC-JkEld0VrvlOMHISw7OKvd40R8GblXYv1/exec");</script>
+<script>window.API_URL = "https://script.google.com/macros/s/AKfycbw4ARMmET-by_grZ_4J1Y6Okl9PgRVeJPC-JkEld0VrvlOMHISw7OKvd40R8GblXYv1/exec";</script>
+<title>Territorio Cuerpo · Encuentro de movimiento para mujeres</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --vino: #7A2440;
+    --azafran: #E2A43C;
+    --arcilla: #C8566A;
+    --salvia: #8E9C7C;
+    --fondo: #F2E8E4;
+    --superficie: #FBF5F2;
+    --texto: #2A1520;
+    --texto-2: #6D5560;
+    --linea: #DCCBC6;
+    --acento: var(--vino);
+    --sobre-acento: #FBF5F2;
+    --bloque: #7A2440;
+    --bloque-texto: #FBEFF2;
+    --bloque-texto-2: #E9C9D2;
+    --error: #A3243B;
+    --radio: 18px;
+    --serif: 'Gloock', Georgia, 'Times New Roman', serif;
+    --sans: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #1D1117;
+      --superficie: #28181F;
+      --texto: #F4E7EB;
+      --texto-2: #C5ACB6;
+      --linea: #45303A;
+      --acento: #E07A93;
+      --sobre-acento: #1D1117;
+      --bloque: #561A2E;
+      --bloque-texto: #FBEFF2;
+      --bloque-texto-2: #E4BFCB;
+      --error: #FF8FA6;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; margin: 0; }
+  h2 { font-size: clamp(2rem, 7vw, 3rem); color: var(--acento); margin-bottom: 1.25rem; }
+  p { margin: 0 0 1rem; }
+  a { color: var(--acento); }
+  :focus-visible { outline: 3px solid var(--azafran); outline-offset: 3px; border-radius: 6px; }
+
+  .contenedor { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 72px 0; }
+  .eyebrow {
+    font-size: .8rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600;
+    color: var(--texto-2); margin-bottom: .75rem;
+  }
+
+  .boton {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    min-height: 52px; padding: 0 28px; border-radius: 999px; border: 0;
+    background: var(--acento); color: var(--sobre-acento);
+    font: 600 1.05rem var(--sans); text-decoration: none; cursor: pointer; text-align: center; line-height: 1.25; padding-block: 10px;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+  .boton:hover { transform: translateY(-1px); }
+  .boton[disabled] { opacity: .6; cursor: progress; transform: none; }
+  .boton.secundario { background: transparent; color: var(--acento); border: 2px solid currentColor; }
+
+  /* ─── Hero ─── */
+  .hero { padding: 40px 0 64px; }
+  .hero .contenedor { display: grid; gap: 36px; align-items: center; }
+  .hero h1 { font-size: clamp(3.2rem, 15vw, 6rem); color: var(--acento); margin-bottom: 1rem; }
+  .hero .cuando { font-weight: 600; font-size: 1.05rem; margin-bottom: 1rem; }
+  .hero .bajada { font-size: 1.2rem; color: var(--texto-2); max-width: 32ch; margin-bottom: 1.75rem; }
+  .acciones { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .pastilla {
+    display: inline-flex; align-items: center; gap: .5rem;
+    padding: 8px 16px; border-radius: 999px; font-size: .95rem; font-weight: 600;
+    background: var(--superficie); border: 1px solid var(--linea); color: var(--texto);
+  }
+  .pastilla::before {
+    content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--salvia);
+  }
+  .pastilla.pocos::before { background: var(--azafran); }
+  .pastilla.lleno::before { background: var(--arcilla); }
+
+  .respira-marco { display: grid; place-items: center; order: -1; }
+  .respira {
+    width: min(70vw, 340px); aspect-ratio: 1;
+    background: linear-gradient(140deg, var(--azafran), var(--arcilla));
+    border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+    display: grid; place-items: center;
+    animation: respirar 10s ease-in-out infinite;
+    box-shadow: 0 30px 80px -30px rgba(200, 86, 106, .55);
+  }
+  .respira span {
+    grid-area: 1 / 1; font-family: var(--serif); font-size: clamp(1.6rem, 6vw, 2.2rem); color: #2A1520;
+  }
+  .respira .inhala { animation: fundido 10s ease-in-out infinite; }
+  .respira .exhala { animation: fundido 10s ease-in-out infinite -5s; }
+  .respira .quieta { display: none; }
+  @keyframes respirar {
+    0%, 100% { transform: scale(.84) rotate(0deg); border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%; }
+    50% { transform: scale(1.04) rotate(8deg); border-radius: 58% 42% 38% 62% / 55% 62% 38% 45%; }
+  }
+  @keyframes fundido {
+    0%, 42% { opacity: 1; }
+    50%, 92% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .respira, .respira span { animation: none !important; }
+    .respira .inhala, .respira .exhala { display: none; }
+    .respira .quieta { display: block; }
+    .boton { transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ─── Manifiesto ─── */
+  .manifiesto .texto { max-width: 62ch; font-size: 1.15rem; }
+  .manifiesto .destacado { font-family: var(--serif); font-size: clamp(1.6rem, 6vw, 2.2rem); color: var(--acento); line-height: 1.2; }
+  .tachados { display: flex; flex-wrap: wrap; gap: 10px; margin: 1.5rem 0 2rem; padding: 0; list-style: none; }
+  .tachados li {
+    padding: 6px 14px; border-radius: 999px; border: 1px dashed var(--linea);
+    color: var(--texto-2); text-decoration: line-through; text-decoration-color: var(--arcilla);
+    text-decoration-thickness: 2px; font-size: .95rem; background: var(--superficie);
+  }
+
+  /* ─── Recorrido ─── */
+  .recorrido { background: var(--superficie); }
+  .pasos-recorrido { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: 28px; }
+  .pasos-recorrido::before {
+    content: ""; position: absolute; left: 23px; top: 24px; bottom: 24px;
+    border-left: 2px dashed var(--linea);
+  }
+  .pasos-recorrido li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; position: relative; }
+  .circulo {
+    width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--acento); color: var(--sobre-acento); font-family: var(--serif); font-size: 1.3rem;
+    position: relative; z-index: 1;
+  }
+  .pasos-recorrido h3 { font-size: 1.4rem; margin: 10px 0 6px; }
+  .pasos-recorrido p { color: var(--texto-2); margin: 0; font-size: 1rem; }
+  .pasos-recorrido .aparte .circulo {
+    background: var(--superficie); color: var(--salvia); border: 2px dashed var(--salvia);
+  }
+  .pasos-recorrido .aparte h3 { color: var(--salvia); }
+  .etiqueta-aparte {
+    display: inline-block; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 700;
+    color: var(--salvia); margin-top: 8px;
+  }
+
+  /* ─── Datos ─── */
+  .datos-bloque {
+    background: var(--bloque); color: var(--bloque-texto); border-radius: 28px;
+    padding: 40px 24px; margin: 0 auto;
+  }
+  .datos-bloque h2 { color: var(--bloque-texto); }
+  .datos-lista { display: grid; gap: 18px; margin: 0 0 2rem; }
+  .datos-grilla > div:first-child .datos-lista { margin-bottom: 18px; }
+  .datos-lista div { border-top: 1px solid rgba(255, 255, 255, .18); padding-top: 12px; }
+  .datos-lista dt { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--bloque-texto-2); }
+  .datos-lista dd { margin: 4px 0 0; font-size: 1.15rem; font-weight: 600; }
+  .cuenta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; max-width: 420px; margin: 0 0 1.75rem; }
+  .cuenta div {
+    min-width: 0; padding: 14px 6px; border-radius: 16px; text-align: center;
+    background: rgba(255, 255, 255, .1);
+  }
+  .cuenta strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 7vw, 2.2rem); line-height: 1; font-variant-numeric: tabular-nums; }
+  .cuenta span { font-size: clamp(.7rem, 3.2vw, .85rem); color: var(--bloque-texto-2); }
+  .datos-bloque .boton { background: var(--bloque-texto); color: #7A2440; }
+
+  /* ─── Guía ─── */
+  .guia .contenedor { display: grid; gap: 28px; align-items: center; }
+  .guia-foto { width: 100%; max-width: 360px; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; border-radius: 28px; }
+  .guia h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+  .roles { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0 0 1.5rem; list-style: none; }
+  .roles li {
+    padding: 6px 16px; border-radius: 999px; font-weight: 600; font-size: .95rem;
+    background: color-mix(in srgb, var(--salvia) 22%, transparent); color: var(--texto);
+  }
+  .guia .texto { max-width: 60ch; font-size: 1.1rem; }
+
+  /* ─── Inscripción ─── */
+  .inscripcion { background: var(--superficie); }
+  .inscripcion-grilla { display: grid; gap: 36px; }
+  .cupo-caja { background: var(--fondo); border-radius: var(--radio); padding: 20px; margin-bottom: 24px; }
+  .cupo-caja p { margin: 0 0 10px; font-weight: 600; }
+  .barra { height: 10px; border-radius: 999px; background: var(--linea); overflow: hidden; }
+  .barra span {
+    display: block; height: 100%; width: 0; border-radius: inherit;
+    background: linear-gradient(90deg, var(--azafran), var(--arcilla)); transition: width .6s ease;
+  }
+  .como { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+  .como li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; align-items: start; }
+  .como b {
+    width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+    border: 2px solid var(--acento); color: var(--acento); font-family: var(--serif); font-weight: 400;
+  }
+  .como span { padding-top: 5px; }
+
+  form { display: grid; gap: 22px; }
+  .campo { display: grid; gap: 6px; }
+  label, legend { font-weight: 600; }
+  .ayuda { font-size: .9rem; color: var(--texto-2); font-weight: 400; }
+  input[type=text], input[type=email], input[type=tel], textarea {
+    width: 100%; font: inherit; color: var(--texto); background: var(--fondo);
+    border: 1.5px solid var(--linea); border-radius: 12px; padding: 12px 14px; min-height: 50px;
+  }
+  textarea { min-height: 96px; resize: vertical; }
+  input:focus-visible, textarea:focus-visible { outline: 3px solid var(--azafran); outline-offset: 1px; border-color: var(--acento); }
+  [aria-invalid=true] { border-color: var(--error) !important; }
+  .error { color: var(--error); font-size: .9rem; font-weight: 600; min-height: 0; }
+  .error:empty { display: none; }
+  fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+  legend { padding: 0; margin-bottom: 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; }
+  .chip { position: relative; }
+  .chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .chip span {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 999px;
+    border: 1.5px solid var(--linea); background: var(--fondo); cursor: pointer; font-weight: 500;
+  }
+  .chip input:checked + span { background: var(--acento); color: var(--sobre-acento); border-color: var(--acento); }
+  .chip input:focus-visible + span { outline: 3px solid var(--azafran); outline-offset: 2px; }
+  .aviso-suave { font-size: .9rem; color: var(--salvia); font-weight: 600; margin-top: 8px; display: block; }
+  .check { display: grid; grid-template-columns: 24px 1fr; gap: 12px; align-items: start; font-weight: 500; }
+  .check input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--acento); }
+  .alerta {
+    padding: 14px 16px; border-radius: 12px; font-weight: 600;
+    background: color-mix(in srgb, var(--error) 12%, transparent); color: var(--error);
+  }
+  .alerta:empty { display: none; }
+  .exito {
+    background: var(--fondo); border-radius: var(--radio); padding: 28px 22px;
+    border: 1px solid var(--linea);
+  }
+  .exito:focus { outline: none; }
+  .exito h3 { font-size: 2rem; color: var(--acento); margin-bottom: 1rem; }
+  .exito .boton { margin-top: .5rem; }
+
+  /* ─── FAQ ─── */
+  .faq details { border-bottom: 1px solid var(--linea); }
+  .faq summary {
+    cursor: pointer; list-style: none; padding: 18px 36px 18px 0; font-weight: 600; font-size: 1.1rem;
+    position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "+"; position: absolute; right: 6px; top: 12px; font-size: 1.6rem; color: var(--acento);
+    font-weight: 400;
+  }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details p { color: var(--texto-2); padding-bottom: 8px; max-width: 62ch; }
+
+  /* ─── Cierre ─── */
+  .cierre { text-align: center; padding: 96px 0; }
+  .cierre p.grande { font-family: var(--serif); font-size: clamp(2.4rem, 10vw, 4.4rem); color: var(--acento); line-height: 1.1; margin-bottom: 2rem; }
+  footer { text-align: center; padding: 28px 20px 40px; color: var(--texto-2); font-size: .9rem; }
+
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (min-width: 820px) {
+    body { font-size: 18px; }
+    section { padding: 104px 0; }
+    .hero { padding: 72px 0 96px; }
+    .hero .contenedor { grid-template-columns: 1.15fr .85fr; }
+    .respira-marco { order: 0; }
+    .pasos-recorrido { grid-template-columns: repeat(5, 1fr); gap: 20px; }
+    .pasos-recorrido::before {
+      left: 10%; right: 10%; top: 23px; bottom: auto; border-left: 0; border-top: 2px dashed var(--linea);
+    }
+    .pasos-recorrido li { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    .datos-bloque { padding: 64px 56px; }
+    .datos-grilla { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+    .guia .contenedor { grid-template-columns: auto 1fr; gap: 56px; }
+    .inscripcion-grilla { grid-template-columns: .8fr 1.2fr; gap: 64px; align-items: start; }
+    .inscripcion aside { position: sticky; top: 24px; }
+  }
+</style>
 </head>
-<body><p>Cargando Territorio Cuerpo… Si no abre, <a href="https://script.google.com/macros/s/AKfycbw4ARMmET-by_grZ_4J1Y6Okl9PgRVeJPC-JkEld0VrvlOMHISw7OKvd40R8GblXYv1/exec">tocá acá</a>.</p></body>
+<body>
+
+<header class="hero">
+  <div class="contenedor">
+    <div>
+      <p class="eyebrow">Encuentro de movimiento para mujeres</p>
+      <h1>Territorio Cuerpo</h1>
+      <p class="cuando">Domingo 11 de octubre · 14:00 hs · Boedo, CABA</p>
+      <p class="bajada">90 minutos para dejar de exigirle al cuerpo que llegue, y empezar a preguntarle cómo está.</p>
+      <div class="acciones">
+        <button type="button" class="boton" data-ir="inscripcion">Quiero ir</button>
+        <span class="pastilla" id="pastilla" aria-live="polite">Cupo: 20 lugares</span>
+      </div>
+    </div>
+    <div class="respira-marco" aria-hidden="true">
+      <div class="respira">
+        <span class="inhala">Inhalá</span>
+        <span class="exhala">Exhalá</span>
+        <span class="quieta">Respirá</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="manifiesto" aria-labelledby="t-manifiesto">
+    <div class="contenedor">
+      <p class="eyebrow">De qué se trata</p>
+      <h2 id="t-manifiesto">Las mujeres vivimos a las corridas.</h2>
+      <div class="texto">
+        <p>El cuerpo tiene que llegar: al trabajo, a buscar a los chicos, a la reunión, a todos lados. Rendir, sostener, cumplir. Y en el medio de tanto “tiene que”, nos vamos olvidando de preguntarle qué necesita él.</p>
+        <ul class="tachados" aria-label="Todo lo que el cuerpo tiene que">
+          <li>tiene que llegar</li>
+          <li>rendir</li>
+          <li>sostener</li>
+          <li>cumplir</li>
+          <li>buscar a los chicos</li>
+          <li>la reunión</li>
+          <li>que nada se caiga</li>
+        </ul>
+        <p>No paramos. No escuchamos. Controlamos cada movimiento para que todo salga bien, para que nada se caiga.</p>
+        <p class="destacado">¿Y si por una vez lo soltamos?</p>
+        <p>Territorio Cuerpo es un encuentro para eso: para dejar de exigirle al cuerpo que llegue, y empezar a preguntarle cómo está. Para soltar el control, aunque sea por 90 minutos. Para movernos sin que nada tenga que salir bien.</p>
+        <p>No es una clase. Es una pausa real, compartida con otras mujeres que también están cansadas de andar a las corridas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recorrido" aria-labelledby="t-recorrido">
+    <div class="contenedor">
+      <p class="eyebrow">El recorrido</p>
+      <h2 id="t-recorrido">Cinco momentos</h2>
+      <ol class="pasos-recorrido">
+        <li>
+          <span class="circulo" aria-hidden="true">1</span>
+          <div><h3>Cuerpo en Sintonía</h3><p>El caldeamiento corporal, para despertar el cuerpo y llegar de verdad al espacio.</p></div>
+        </li>
+        <li>
+          <span class="circulo" aria-hidden="true">2</span>
+          <div><h3>Yoga coreográfico</h3><p>Secuencias simples, bailadas, al ritmo de la música.</p></div>
+        </li>
+        <li>
+          <span class="circulo" aria-hidden="true">3</span>
+          <div><h3>Movimiento libre + Compartir</h3><p>Soltar en movimiento colectivo.</p></div>
+        </li>
+        <li>
+          <span class="circulo" aria-hidden="true">4</span>
+          <div><h3>Relajación Final</h3><p>Un momento cuidado para frenar.</p></div>
+        </li>
+        <li class="aparte">
+          <span class="circulo" aria-hidden="true">5</span>
+          <div>
+            <h3>Merienda y charla</h3>
+            <p>Un momento distendido para merendar y conversar.</p>
+            <span class="etiqueta-aparte">Fuera del encuentro guiado</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-datos">
+    <div class="contenedor">
+      <div class="datos-bloque">
+        <div class="datos-grilla">
+          <div>
+            <h2 id="t-datos">Datos del encuentro</h2>
+            <dl class="datos-lista">
+              <div><dt>Fecha</dt><dd>Domingo 11 de octubre de 2026</dd></div>
+              <div><dt>Horario</dt><dd>14:00 hs</dd></div>
+              <div><dt>Duración</dt><dd>90 minutos de encuentro</dd></div>
+              <div><dt>Sede</dt><dd>Av. Boedo 843, Boedo, CABA</dd></div>
+            </dl>
+          </div>
+          <div>
+            <dl class="datos-lista">
+              <div><dt>Precio</dt><dd>$20.000 por persona</dd></div>
+              <div><dt>Forma de pago</dt><dd>Transferencia bancaria, completa y por adelantado</dd></div>
+              <div><dt>Cupo</dt><dd>Hasta 20 personas</dd></div>
+              <div><dt>Para quién</dt><dd>Mujeres que sienten la necesidad de parar y reconectar con su cuerpo</dd></div>
+            </dl>
+            <p class="eyebrow" style="color:var(--bloque-texto-2)">Faltan</p>
+            <div class="cuenta" id="cuenta" aria-live="off">
+              <div><strong id="c-dias">–</strong><span>días</span></div>
+              <div><strong id="c-horas">–</strong><span>horas</span></div>
+              <div><strong id="c-min">–</strong><span>minutos</span></div>
+              <div><strong id="c-seg">–</strong><span>segundos</span></div>
+            </div>
+            <a class="boton" target="_blank" rel="noopener"
+               href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Territorio%20Cuerpo&amp;dates=20261011T170000Z/20261011T183000Z&amp;location=Av.%20Boedo%20843%2C%20Boedo%2C%20CABA">Agendar en Google Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guia" aria-labelledby="t-guia">
+    <div class="contenedor">
+      
+        <img class="guia-foto" src="flor.jpg" alt="Flor Dragonetti sonriendo con un ramo de flores">
+      
+      <div>
+        <p class="eyebrow">Quién guía el encuentro</p>
+        <h2 id="t-guia">Flor Dragonetti</h2>
+        <ul class="roles">
+          <li>Actriz</li>
+          <li>Profesora de yoga</li>
+          <li>Profesora de comedia musical</li>
+        </ul>
+        <p class="texto">Territorio Cuerpo nace de la mirada de su creadora sobre una desconexión que ve constantemente en las mujeres que la rodean: cuerpos exigidos, acelerados, que rara vez son escuchados en lugar de solo usados. Este encuentro reúne herramientas del movimiento, la expresión y la escucha corporal en un formato pensado para el cuerpo y no para la técnica en sí misma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inscripcion" id="inscripcion" aria-labelledby="t-inscripcion">
+    <div class="contenedor inscripcion-grilla">
+      <aside>
+        <p class="eyebrow">Inscripción</p>
+        <h2 id="t-inscripcion">Reservá tu lugar</h2>
+        <div class="cupo-caja">
+          <p id="cupo-texto" aria-live="polite">Quedan 20 lugares de 20</p>
+          <div class="barra" role="presentation"><span id="cupo-barra"></span></div>
+        </div>
+        <ol class="como">
+          <li><b>1</b><span>Completás el formulario.</span></li>
+          <li><b>2</b><span>Te llega un mail con los datos para transferir.</span></li>
+          <li><b>3</b><span>Al recibir la transferencia, te confirmamos.</span></li>
+        </ol>
+      </aside>
+
+      <div id="zona-form">
+        <form id="form" novalidate>
+          <div class="campo">
+            <label for="nombre">Nombre y apellido</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="e-nombre">
+            <span class="error" id="e-nombre"></span>
+          </div>
+          <div class="campo">
+            <label for="whatsapp">WhatsApp <span class="ayuda">con código de área, por ejemplo 11 2345 6789</span></label>
+            <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" required aria-describedby="e-whatsapp">
+            <span class="error" id="e-whatsapp"></span>
+          </div>
+          <div class="campo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="e-email">
+            <span class="error" id="e-email"></span>
+          </div>
+          <fieldset>
+            <legend>¿Tenés experiencia con el movimiento o el yoga?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="experiencia" value="Ninguna"><span>Ninguna</span></label>
+              <label class="chip"><input type="radio" name="experiencia" value="Algo"><span>Algo</span></label>
+              <label class="chip"><input type="radio" name="experiencia" value="Bastante"><span>Bastante</span></label>
+            </div>
+            <span class="aviso-suave">No hace falta experiencia.</span>
+          </fieldset>
+          <div class="campo">
+            <label for="cuerpo">¿Hay algo de tu cuerpo que tengamos que saber? <span class="ayuda">Opcional: lesión, embarazo, etc.</span></label>
+            <input type="text" id="cuerpo" name="cuerpo" maxlength="1000">
+          </div>
+          <div class="campo">
+            <label for="soltar">¿Qué te gustaría soltar? <span class="ayuda">Opcional</span></label>
+            <textarea id="soltar" name="soltar" maxlength="1000"></textarea>
+          </div>
+          <fieldset>
+            <legend>¿Cómo te enteraste?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="enteraste" value="Instagram"><span>Instagram</span></label>
+              <label class="chip"><input type="radio" name="enteraste" value="Me lo pasó una amiga"><span>Me lo pasó una amiga</span></label>
+              <label class="chip"><input type="radio" name="enteraste" value="WhatsApp"><span>WhatsApp</span></label>
+              <label class="chip"><input type="radio" name="enteraste" value="Otro"><span>Otro</span></label>
+            </div>
+          </fieldset>
+          <div class="campo">
+            <label class="check">
+              <input type="checkbox" id="acepta" name="acepta" required aria-describedby="e-acepta">
+              <span>Entiendo que mi lugar se confirma al transferir el total de $20.000 por adelantado.</span>
+            </label>
+            <span class="error" id="e-acepta"></span>
+          </div>
+          <div class="alerta" id="alerta" role="alert"></div>
+          <div><button type="submit" class="boton" id="enviar">Reservar mi lugar</button></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="t-faq">
+    <div class="contenedor">
+      <h2 id="t-faq">Preguntas frecuentes</h2>
+      <details><summary>¿Necesito experiencia?</summary><p>No, cada una se mueve desde donde está.</p></details>
+      <details><summary>¿Qué ropa llevo?</summary><p>Ropa cómoda, mat o una manta, abrigo para la relajación y agua.</p></details>
+      <details><summary>¿Es una clase?</summary><p>No, es una pausa compartida.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Por transferencia, el total por adelantado. Los datos te llegan por mail al inscribirte.</p></details>
+      <details><summary>¿Cuándo queda confirmado mi lugar?</summary><p>Al inscribirte queda reservado, y se confirma al recibir la transferencia. Si el cupo está lleno, quedás en lista de espera y te avisamos por mail si se libera un lugar.</p></details>
+      <details><summary>¿Qué pasa si no puedo ir?</summary><p>Avisanos por WhatsApp lo antes posible. Una vez abonado no hay reembolso.</p></details>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <div class="contenedor">
+      <p class="grande">Vení a soltar.<br>Vení a volver.</p>
+      <button type="button" class="boton" data-ir="inscripcion" id="cta-cierre">Quiero ir</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Territorio Cuerpo · Boedo, CABA ·
+  <a id="wa-footer" href="https://wa.me/5491166489003" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+</footer>
+
+<script type="application/json" id="datos-iniciales">{"cupo":20,"ocupados":0,"restantes":20,"precio":20000,"fecha":"2026-10-11T14:00:00-03:00","whatsapp":"5491166489003"}</script>
+<script>
+(function () {
+  'use strict';
+
+  var enAppsScript = !!(window.google && google.script && google.script.run);
+  // En territoriocuerpo.casa la página no vive en Google: habla con Google por esta dirección.
+  var API = window.API_URL || '';
+  function pedirCupo() {
+    if (enAppsScript) google.script.run.withSuccessHandler(pintarCupo).datosPublicos();
+    else if (API) fetch(API + '?accion=datos').then(function (r) { return r.json(); }).then(pintarCupo).catch(function () {});
+  }
+  function enviarInscripcion(d, alTerminar, alFallar) {
+    if (enAppsScript) {
+      google.script.run.withSuccessHandler(alTerminar).withFailureHandler(alFallar).registrar(d);
+    } else if (API) {
+      // Se manda como texto simple para que el navegador no bloquee el pedido a Google.
+      // Si la conexión falla, se reintenta una vez (un mail repetido nunca se anota dos veces).
+      var intentar = function (quedan) {
+        fetch(API, { method: 'POST', body: JSON.stringify(d) })
+          .then(function (r) { return r.json(); })
+          .then(function (res) { if (res.ok) alTerminar(res.resultado); else alFallar(new Error(res.error)); })
+          .catch(function () {
+            if (quedan > 0) setTimeout(function () { intentar(quedan - 1); }, 1500);
+            else alFallar(new Error('No pudimos conectarnos. Revisá tu conexión y probá de nuevo.'));
+          });
+      };
+      intentar(1);
+    } else {
+      // Vista previa fuera de Google: simula una respuesta.
+      setTimeout(function () {
+        alTerminar({ estado: info.restantes > 0 ? 'Pendiente de pago' : 'Lista de espera', posicionEspera: 3, repetida: false, info: info });
+      }, 800);
+    }
+  }
+  var info;
+  try { info = JSON.parse(document.getElementById('datos-iniciales').textContent); }
+  catch (e) { info = { cupo: 20, ocupados: 0, restantes: 20, precio: 20000, fecha: '2026-10-11T14:00:00-03:00', whatsapp: '5491166489003' }; }
+
+  var $ = function (id) { return document.getElementById(id); };
+  var WA = info.whatsapp;
+  var nombreEnviado = '';
+
+  /* Botones "Quiero ir": desplazan al formulario. */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ir]'), function (b) {
+    b.addEventListener('click', function () {
+      var destino = $(b.getAttribute('data-ir'));
+      var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      destino.scrollIntoView({ behavior: quieto ? 'auto' : 'smooth', block: 'start' });
+      var primero = $('nombre');
+      if (primero) setTimeout(function () { primero.focus({ preventScroll: true }); }, quieto ? 0 : 500);
+    });
+  });
+
+  /* Cupo en vivo */
+  function lugares(n) { return n === 1 ? '1 lugar' : n + ' lugares'; }
+  function pintarCupo(d) {
+    if (!d) return;
+    info = d;
+    var lleno = d.restantes <= 0;
+    var pastilla = $('pastilla');
+    pastilla.className = 'pastilla' + (lleno ? ' lleno' : d.restantes < 8 ? ' pocos' : '');
+    pastilla.textContent = lleno ? 'Cupo completo · lista de espera'
+      : d.restantes < 8 ? 'Últimos ' + lugares(d.restantes)
+      : 'Quedan ' + lugares(d.restantes);
+    $('cupo-texto').textContent = lleno
+      ? 'El cupo está completo. Podés sumarte a la lista de espera.'
+      : 'Quedan ' + lugares(d.restantes) + ' de ' + d.cupo;
+    $('cupo-barra').style.width = Math.min(100, Math.round(d.ocupados / d.cupo * 100)) + '%';
+    var boton = $('enviar');
+    if (boton && !boton.disabled) boton.textContent = lleno ? 'Sumarme a la lista de espera' : 'Reservar mi lugar';
+  }
+  pintarCupo(info);
+  if (!enAppsScript) pedirCupo();
+  setInterval(pedirCupo, 60000);
+
+  /* Cuenta regresiva */
+  var inicio = new Date(info.fecha).getTime();
+  function dos(n) { return n < 10 ? '0' + n : String(n); }
+  function tic() {
+    var falta = inicio - Date.now();
+    if (falta <= 0) {
+      $('cuenta').innerHTML = '<p style="margin:0;font-weight:600">' +
+        (falta > -2 * 3600e3 ? 'Es ahora. Te esperamos.' : 'El encuentro ya pasó. Gracias por venir.') + '</p>';
+      return;
+    }
+    var seg = Math.floor(falta / 1000);
+    $('c-dias').textContent = Math.floor(seg / 86400);
+    $('c-horas').textContent = dos(Math.floor(seg / 3600) % 24);
+    $('c-min').textContent = dos(Math.floor(seg / 60) % 60);
+    $('c-seg').textContent = dos(seg % 60);
+    setTimeout(tic, 1000 - (falta % 1000));
+  }
+  tic();
+
+  /* Formulario */
+  var form = $('form');
+  function valorRadio(nombre) {
+    var r = form.querySelector('input[name="' + nombre + '"]:checked');
+    return r ? r.value : '';
+  }
+  function marcar(id, mensaje) {
+    var campo = $(id);
+    $('e-' + id).textContent = mensaje || '';
+    if (mensaje) campo.setAttribute('aria-invalid', 'true'); else campo.removeAttribute('aria-invalid');
+    return !mensaje;
+  }
+  function validar(d) {
+    var ok = [
+      marcar('nombre', d.nombre.length < 3 ? 'Escribí tu nombre y apellido.' : ''),
+      marcar('whatsapp', d.whatsapp.replace(/\D/g, '').length < 8 ? 'Tiene que tener al menos 8 números.' : ''),
+      marcar('email', !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email) ? 'Revisá el email: parece que tiene un error.' : ''),
+      marcar('acepta', !d.acepta ? 'Tildá esta casilla para poder reservar.' : '')
+    ];
+    var primero = form.querySelector('[aria-invalid=true]');
+    if (primero) primero.focus();
+    return ok.every(Boolean);
+  }
+  ['nombre', 'whatsapp', 'email', 'acepta'].forEach(function (id) {
+    $(id).addEventListener('input', function () { if ($(id).getAttribute('aria-invalid')) marcar(id, ''); });
+    $(id).addEventListener('change', function () { if ($(id).getAttribute('aria-invalid')) marcar(id, ''); });
+  });
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    $('alerta').textContent = '';
+    var d = {
+      nombre: $('nombre').value.trim(),
+      whatsapp: $('whatsapp').value.trim(),
+      email: $('email').value.trim(),
+      experiencia: valorRadio('experiencia'),
+      cuerpo: $('cuerpo').value.trim(),
+      soltar: $('soltar').value.trim(),
+      enteraste: valorRadio('enteraste'),
+      acepta: $('acepta').checked
+    };
+    if (!validar(d)) return;
+    nombreEnviado = d.nombre.split(' ')[0];
+    var boton = $('enviar');
+    var textoAntes = boton.textContent;
+    boton.disabled = true;
+    boton.textContent = 'Enviando…';
+    var alFallar = function (err) {
+      boton.disabled = false;
+      boton.textContent = textoAntes;
+      var msg = (err && err.message ? err.message : String(err || '')).replace(/^Error:\s*/, '');
+      $('alerta').textContent = msg && msg.length < 300 ? msg
+        : 'No pudimos guardar tu inscripción. Revisá tu conexión y probá de nuevo.';
+    };
+    enviarInscripcion(d, mostrarResultado, alFallar);
+  });
+
+  function el(tag, texto, clase) {
+    var n = document.createElement(tag);
+    if (texto) n.textContent = texto;
+    if (clase) n.className = clase;
+    return n;
+  }
+  function botonComprobante() {
+    var a = el('a', 'Mandar el comprobante por WhatsApp', 'boton');
+    a.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent('Hola, soy ' + $('nombre').value.trim() + '. Te mando el comprobante de Territorio Cuerpo.');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    return a;
+  }
+
+  function mostrarResultado(r) {
+    if (r.info) pintarCupo(r.info);
+    var caja = el('div', '', 'exito');
+    caja.setAttribute('tabindex', '-1');
+    var aviso = 'Te mandamos un mail con los datos para transferir. Si no lo ves en unos minutos, revisá la carpeta de spam o promociones.';
+    if (r.repetida) {
+      caja.appendChild(el('h3', 'Ya estabas anotada, ' + nombreEnviado));
+      if (r.estado === 'Confirmada') {
+        caja.appendChild(el('p', 'Tu lugar ya está confirmado. Nos vemos el domingo 11 de octubre.'));
+      } else if (r.estado === 'Lista de espera') {
+        caja.appendChild(el('p', 'Seguís en la lista de espera, en el número ' + r.posicionEspera + '. Si se libera un lugar, te escribimos por mail.'));
+      } else {
+        caja.appendChild(el('p', 'Tu lugar sigue reservado y se confirma al recibir la transferencia. Los datos para transferir están en el mail que te mandamos (revisá spam si no lo encontrás).'));
+        caja.appendChild(botonComprobante());
+      }
+    } else if (r.estado === 'Lista de espera') {
+      caja.appendChild(el('h3', 'Estás en la lista de espera, ' + nombreEnviado));
+      caja.appendChild(el('p', 'El cupo está completo por ahora. Sos la número ' + r.posicionEspera + ' en la lista.'));
+      caja.appendChild(el('p', 'Si se libera un lugar, te escribimos por mail con los datos para transferir. No tenés que hacer nada más.'));
+    } else {
+      caja.appendChild(el('h3', '¡Tu lugar está reservado, ' + nombreEnviado + '!'));
+      caja.appendChild(el('p', aviso));
+      caja.appendChild(el('p', 'Cuando transfieras los $20.000, mandanos el comprobante y te confirmamos.'));
+      caja.appendChild(botonComprobante());
+    }
+    var zona = $('zona-form');
+    zona.innerHTML = '';
+    zona.appendChild(caja);
+    caja.scrollIntoView({ block: 'center' });
+    caja.focus({ preventScroll: true });
+    $('cta-cierre').hidden = true;
+  }
+})();
+</script>
+</body>
 </html>
