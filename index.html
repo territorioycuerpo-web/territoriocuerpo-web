@@ -324,6 +324,40 @@
         color-mix(in srgb, var(--fondo) 40%, transparent) 100%);
     }
   }
+  /* Portada a pantalla completa, con el contenido centrado y el video más presente */
+  .hero { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding: 48px 0 96px; }
+  .hero .contenedor { width: 100%; }
+  .hero-fondo { -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%); mask-image: linear-gradient(to bottom, #000 82%, transparent 100%); }
+  .hero::before {
+    background: linear-gradient(180deg,
+      color-mix(in srgb, var(--fondo) 20%, transparent) 0%,
+      color-mix(in srgb, var(--fondo) 58%, transparent) 50%,
+      color-mix(in srgb, var(--fondo) 88%, transparent) 100%);
+  }
+  @media (min-width: 820px) {
+    .hero { padding: 64px 0 112px; }
+    .hero::before {
+      background: linear-gradient(90deg,
+        color-mix(in srgb, var(--fondo) 82%, transparent) 0%,
+        color-mix(in srgb, var(--fondo) 52%, transparent) 45%,
+        color-mix(in srgb, var(--fondo) 18%, transparent) 100%);
+    }
+  }
+  .bajar {
+    position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%);
+    width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--linea);
+    background: color-mix(in srgb, var(--superficie) 70%, transparent); color: var(--acento);
+    display: grid; place-items: center; cursor: pointer; animation: flotar 2.4s ease-in-out infinite;
+  }
+  .bajar svg { width: 20px; height: 20px; }
+  @media (max-width: 819px) {
+    .hero .contenedor { gap: 20px; }
+    .hero .respira { width: min(46vw, 210px); }
+    .hero h1 { font-size: clamp(3rem, 14vw, 4.2rem); }
+  }
+  @keyframes flotar { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+  @media (prefers-reduced-motion: reduce) { .bajar { animation: none; } }
+
   .estado { display: inline-flex; align-items: center; gap: .5rem; padding: 8px 16px; border-radius: 999px; font-size: .95rem; font-weight: 600; background: var(--superficie); border: 1px solid var(--linea); }
   .estado::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--azafran); }
 
@@ -385,10 +419,13 @@
       </div>
     </div>
   </div>
+  <button type="button" class="bajar" data-ir="de-que-se-trata" aria-label="Bajar a De qué se trata">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
 </header>
 
 <main>
-  <section class="manifiesto" aria-labelledby="t-manifiesto">
+  <section class="manifiesto" id="de-que-se-trata" aria-labelledby="t-manifiesto">
     <div class="contenedor">
       <p class="eyebrow">De qué se trata</p>
       <h2 id="t-manifiesto">Las mujeres vivimos a las corridas.</h2>
@@ -507,7 +544,7 @@
       ev.preventDefault();
       var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       $(b.getAttribute('data-ir')).scrollIntoView({ behavior: quieto ? 'auto' : 'smooth', block: 'start' });
-      var primero = $('nombre');
+      var primero = b.getAttribute('data-ir') === 'espera' && $('nombre');
       if (primero) setTimeout(function () { primero.focus({ preventScroll: true }); }, quieto ? 0 : 500);
     });
   });
